@@ -1,0 +1,23 @@
+ngb-carousel .wrapper {
+  position: relative;
+  height: 500px;
+  padding-top: 55%;
+}
+
+ngb-carousel .wrapper>img {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  margin-bottom: 25%;
+  right: 10%;
+  width: 80%;
+}
+
+.card-group {
+  margin-top: 50px;
+  margin-inside: 50px;
+  margin-bottom: 20px;
+}
+.container-fluid{
+
+}

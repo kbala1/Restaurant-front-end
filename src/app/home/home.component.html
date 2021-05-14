@@ -1,0 +1,73 @@
+<div class="container-fluid">
+  <ngb-carousel *ngIf="images">
+    <ng-template *ngFor="let image of images, index as i" ngbSlide>
+      <div class="wrapper">
+        <img [src]="image" alt=" ">
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+
+<!--<div class="carousel carousel-slider">-->
+<!--  <a class="carousel-item" href="#one!"><img src="assets/images/fries1.jpeg"></a>-->
+<!--  <a class="carousel-item" href="#two!"><img src="assets/images/fries2.jpeg"></a>-->
+<!--&lt;!&ndash;  // <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;  // <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;  // <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>&ndash;&gt;-->
+<!--</div>-->
+
+<!--<div class="carousel carousel-slider center">-->
+<!--  <div class="carousel-fixed-item center">-->
+<!--    <a class="btn waves-effect white grey-text darken-text-2">button</a>-->
+<!--  </div>-->
+<!--  <div class="carousel-item red white-text" href="#one!">-->
+<!--    <h2>First Panel</h2>-->
+<!--    <p class="white-text">This is your first panel</p>-->
+<!--  </div>-->
+<!--  <div class="carousel-item amber white-text" href="#two!">-->
+<!--    <h2>Second Panel</h2>-->
+<!--    <p class="white-text">This is your second panel</p>-->
+<!--  </div>-->
+<!--  <div class="carousel-item green white-text" href="#three!">-->
+<!--    <h2>Third Panel</h2>-->
+<!--    <p class="white-text">This is your third panel</p>-->
+<!--  </div>-->
+<!--  <div class="carousel-item blue white-text" href="#four!">-->
+<!--    <h2>Fourth Panel</h2>-->
+<!--    <p class="white-text">This is your fourth panel</p>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="assets/images/beverage2.jpeg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="assets/images/momo2.jpeg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="assets/images/sandwich.jpeg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+
+<!--<app-menu><a routerLink="/menu">Menu</a></app-menu>-->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
