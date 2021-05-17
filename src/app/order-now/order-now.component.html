@@ -1,0 +1,85 @@
+<!--<div class="modal-body" *ngIf="categories">-->
+<!--  <h4 *ngFor="let category of categories">-->
+<!--    <h2>{{category.name}}</h2>-->
+<!--  <p> <a href="order" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p>-->
+<!--  <hr>-->
+<!--  <h5>Tooltips in a modal</h5>-->
+
+<!--    <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>-->
+<!--  </h4>-->
+<!--</div>-->
+
+<div *ngIf="categories">
+  <div *ngFor="let category of categories">
+    <h4>{{category.name}}</h4>
+    <div *ngFor="let item of category.itemList">
+      <button type="button" class="btn btn-info btn-lg" (click)="openModal()">
+        <pre>{{item.name}}           {{item.price}}</pre></button>
+      <div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Modal title</h4>
+              <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <p>Model body text</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <!--      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">-->
+<!--      <pre>{{item.name}}           {{item.price}}</pre></button>-->
+<!--      <hr>-->
+<!--      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--        <div class="modal-dialog" role="document">-->
+<!--          <div class="modal-content">-->
+<!--            <div class="modal-header">-->
+<!--              <h5 class="modal-title" id="exampleModalLabel">{{item.name}}</h5>-->
+<!--            </div>-->
+<!--            <div class="modal-footer">-->
+<!--              <button type="button" class="btn btn-primary">Add </button>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+<!--    </div>-->
+
+<!--  </div>-->
+
+<!--</div>-->
+
+<!--&lt;!&ndash; Button trigger modal &ndash;&gt;-->
+
+
+<!--<button type="button" class="btn btn-info btn-lg" (click)="openModal()">click to open</button>-->
+<!--<div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">-->
+<!--  <div class="modal-dialog" role="document">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--        <h4 class="modal-title">Model Title</h4>-->
+<!--        <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>-->
+<!--      </div>-->
+<!--      <div class="modal-body">-->
+<!--        <p>Model body text</p>-->
+<!--      </div>-->
+<!--      <div class="modal-footer">-->
+<!--        <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Close</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
