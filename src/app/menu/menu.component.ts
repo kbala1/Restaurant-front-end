@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
- import { CategoryService } from '../services/category/category.service';
+import { CategoryService } from '../services/category/category.service';
 
 
 @Component({
@@ -19,7 +19,7 @@ export class MenuComponent implements OnInit {
   }
 
   getCategories(): any {
-    console.log("here");
+    console.log('here');
     this.categoryService.getCategories().subscribe(response => {
       console.log(response);
       this.categories = response;

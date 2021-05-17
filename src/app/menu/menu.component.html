@@ -1,11 +1,13 @@
-<p>hello</p>
+<p>working</p>
+<div>working demo</div>
+
 <div *ngIf="categories">
   <h1>Welcome to Passion Food</h1>
     <h4 *ngFor="let category of categories">
-      <h2>{{category.name}}</h2>
+      {{category.name}}
       <table class="table table-bordered">
         <thead>
-
+        My table
         </thead>
         <tbody>
         <tr *ngFor="let item of category.itemList">
