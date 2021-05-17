@@ -1,0 +1,13 @@
+h1 {
+   text-align: left;
+  margin-block: 15px;
+}
+h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.table {
+  text-align: center;
+  margin-text: 10px;
+}
