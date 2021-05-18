@@ -9,31 +9,36 @@
 <!--  </h4>-->
 <!--</div>-->
 
-<div *ngIf="categories">
-  <div *ngFor="let category of categories">
+<div class="container" *ngIf="categories">
+  <div class="category" *ngFor="let category of categories; index as i">
     <h4>{{category.name}}</h4>
-    <div *ngFor="let item of category.itemList">
-      <button type="button" class="btn btn-info btn-lg" (click)="openModal()">
-        <pre>{{item.name}}           {{item.price}}</pre></button>
+    <div *ngFor="let item of category.itemList; index as j">
+      <button type="button" class="btn btn-info btn-lg" (click)="openModal(i, j)">
+        <pre>{{item.name}}           ${{item.price}}.00</pre>
+      </button>
       <div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Modal title</h4>
-              <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">{{currentItem?.categoryName}}</h4>
+              <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span>
+              </button>
             </div>
             <div class="modal-body">
-              <p>Model body text</p>
+              <pre>{{currentItem?.itemName}}           ${{currentItem?.price}}.00</pre>
             </div>
             <div class="modal-footer">
+              <p>{{currentItem?.itemQuantity}}</p>
+              <button type="button" class="btn btn-default" (click)="onAddQuantity()" >+</button>
+              <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Add</button>
               <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Close</button>
             </div>
           </div>
-
         </div>
       </div>
-
-
+    </div>
+  </div>
+</div>
 
 
 

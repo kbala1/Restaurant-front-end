@@ -1,3 +1,20 @@
-display{
+.container {
+  display: grid;
+  grid-column: 1 / span 2;
+}
+.category {
+  display: grid;
+  /*grid-template-columns: 50%;*/
+  /*grid-auto-columns: auto;*/
+  grid-templte-rows: 50%;
+  margin-bottom: 15px;
 
+}
+button {
+  margin-top: 15px;
+  background-color: darkgrey;
+}
+h4 {
+  font-family: "Apple Braille";
+  text-align: center;
 }
