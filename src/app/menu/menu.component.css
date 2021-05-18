@@ -1,13 +1,16 @@
 h1 {
-   text-align: left;
+   text-align: center;
+  font-family:"Chalkduster" ;
   margin-block: 15px;
 }
 h2 {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
+  font-family: "Copperplate";
 }
 .table {
   text-align: center;
   margin-text: 10px;
+  font-family: "DFKai-SB";
 }
