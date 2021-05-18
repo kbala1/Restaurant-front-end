@@ -25,14 +25,23 @@ export class OrderNowComponent implements OnInit {
         price: this.categories[categoryIndex].itemList[itemIndex].price,
         itemQuantity: 1
       };
+      this.currentItem.totalPrice = this.currentItem.price;
     }
     this.display = 'block';
   }
 
   onAddQuantity(): void {
 
-    this.currentItem.price += this.currentItem.price ;
+    this.currentItem.totalPrice += this.currentItem.price ;
     this.currentItem.itemQuantity ++;
+  }
+
+  onSubtractQuantity(): void {
+    if (this.currentItem.itemQuantity <= 0) {
+      return;
+    }
+    this.currentItem.totalPrice -= this.currentItem.price ;
+    this.currentItem.itemQuantity --;
   }
 
   onCloseHandled(): void {

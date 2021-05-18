@@ -25,9 +25,11 @@
               </button>
             </div>
             <div class="modal-body">
-              <pre>{{currentItem?.itemName}}           ${{currentItem?.price}}.00</pre>
+              <pre>{{currentItem?.itemName}}           ${{currentItem?.totalPrice}}.00</pre>
             </div>
             <div class="modal-footer">
+
+              <button type="button" class="btn btn-default" (click)="onSubtractQuantity()" >-</button>
               <p>{{currentItem?.itemQuantity}}</p>
               <button type="button" class="btn btn-default" (click)="onAddQuantity()" >+</button>
               <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Add</button>
@@ -38,7 +40,10 @@
       </div>
     </div>
   </div>
+
 </div>
+<div><app-check-out></app-check-out></div>
+
 
 
 
