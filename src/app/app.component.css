@@ -4,3 +4,9 @@ nav {
   margin-bottom: 30px;
   background-color: darkgray;
 }
+
+navbar-nav{
+  text-align: right;
+  text-margin: 150px;
+  text-align-last: center;
+}

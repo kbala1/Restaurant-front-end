@@ -8,12 +8,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { MenuComponent } from './menu/menu.component';
 import {HttpClientModule} from "@angular/common/http";
+import { OrderNowComponent } from './order-now/order-now.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    OrderNowComponent
   ],
   imports: [
     AppRoutingModule,
