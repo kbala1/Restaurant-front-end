@@ -9,13 +9,17 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { MenuComponent } from './menu/menu.component';
 import {HttpClientModule} from "@angular/common/http";
 import { OrderNowComponent } from './order-now/order-now.component';
+import { CheckOutComponent } from './check-out/check-out.component';
+// import { CheckOutComponent } from './services/category/check-out/check-out.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MenuComponent,
-    OrderNowComponent
+    OrderNowComponent,
+    CheckOutComponent,
+    // CheckOutComponent
   ],
   imports: [
     AppRoutingModule,
