@@ -32,7 +32,7 @@
               <button type="button" class="btn btn-default" (click)="onSubtractQuantity()" >-</button>
               <p>{{currentItem?.itemQuantity}}</p>
               <button type="button" class="btn btn-default" (click)="onAddQuantity()" >+</button>
-              <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Add</button>
+              <button type="button" class="btn btn-default" (click)="onAdd()" >Add</button>
               <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Close</button>
             </div>
           </div>
@@ -42,7 +42,7 @@
   </div>
 
 </div>
-<div><app-check-out></app-check-out></div>
+<div><app-check-out [orderedItemList]="orderedItemList"></app-check-out></div>
 
 
 

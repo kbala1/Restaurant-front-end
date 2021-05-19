@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {CategoryService} from '../services/category/category.service';
+import {CheckOutComponent} from "../check-out/check-out.component";
 
 @Component({
   selector: 'app-order-now',
@@ -10,6 +11,7 @@ export class OrderNowComponent implements OnInit {
   public categories: any[];
   display = "none";
   currentItem: any;
+  orderedItemList: any[] = [];
 
   constructor(private categoryService: CategoryService) { }
 
@@ -23,7 +25,8 @@ export class OrderNowComponent implements OnInit {
         categoryName: this.categories[categoryIndex].name,
         itemName: this.categories[categoryIndex].itemList[itemIndex].name,
         price: this.categories[categoryIndex].itemList[itemIndex].price,
-        itemQuantity: 1
+        itemQuantity: 1,
+        itemId: this.categories[categoryIndex].itemList[itemIndex].id
       };
       this.currentItem.totalPrice = this.currentItem.price;
     }
@@ -46,6 +49,15 @@ export class OrderNowComponent implements OnInit {
 
   onCloseHandled(): void {
     this.display = 'none';
+  }
+
+  onAdd(): void {
+    // path: '',
+    // component: CheckOutComponent;
+    this.orderedItemList.push(this.currentItem);
+
+    console.log('Add the things');
+    this.display ='none';
   }
 
   getCategories(): any {
