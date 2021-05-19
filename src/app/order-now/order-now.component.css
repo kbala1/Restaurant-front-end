@@ -1,7 +1,12 @@
 .container {
   display: grid;
-  grid-template-columns: 50%;
+  grid-template-columns: 50% 50%;
   text-align: left;
+
+}
+
+.divItem{
+  width: 100%;
 }
 .category {
   display: grid;
@@ -14,8 +19,13 @@
 button {
   margin-top: 15px;
   background-color: darkgrey;
+
 }
+
 h4 {
   font-family: "Apple Braille";
+  text-align: center;
+}
+.checkout {
   text-align: center;
 }
