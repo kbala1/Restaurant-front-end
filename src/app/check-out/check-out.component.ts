@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-check-out',
@@ -6,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./check-out.component.css']
 })
 export class CheckOutComponent implements OnInit {
-  orderedItemList: any[];
-   orderTotal = 0;
+  @Input('orderedItemList') orderedItemList: any[];
 
   constructor() { }
 
@@ -16,20 +16,18 @@ export class CheckOutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.orderedItemList = [{
-      itemName: 'club Sandwich',
-      price: 6,
-      itemQuantity: 1,
-      total: 6
-    },
-    {
-      itemName: 'Shake',
-      price: 6,
-      itemQuantity: 2,
-      total: 6
+
+  }
+
+  calculateOrderTotal(): number {
+    let orderTotal = 0;
+    if (this.orderedItemList === null){
+      return 0;
     }
-    ];
-    this.orderedItemList.forEach(item => this.orderTotal += item.total);
+    this.orderedItemList.forEach(item => orderTotal += item.totalPrice);
+    console.log(orderTotal);
+    return orderTotal;
+
   }
 
 

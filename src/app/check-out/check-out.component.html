@@ -1,11 +1,12 @@
 
 
 <div class="container">
+  <h2>Your Ordered Items</h2>
   <div>
-    <h5 *ngFor="let item of orderedItemList" >
-      {{item.itemName}} * {{item.itemQuantity}} --------- {{item.total}}
+      <h5 *ngFor="let item of orderedItemList; index as i" >
+      {{item.itemName}} X {{item.itemQuantity}} --------- {{item.totalPrice}}
     </h5>
-    <h5>Total ---------- {{orderTotal}}</h5>
+    <h5>Total ---------- {{calculateOrderTotal()}}</h5>
   </div>
   <div class="form-check">
     <div>
@@ -24,5 +25,5 @@
   </div>
 
 
-  <div><button type="button" class="btn btn-default" (click)="onCheckOut()" >Continue to checkOut</button></div>
+  <div><button routerLink="../placeOrder" type="button" class="btn btn-default" (click)="onCheckOut()" >Continue to checkout</button></div>
 </div>
