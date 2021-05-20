@@ -1,18 +1,29 @@
-
-
-<div class="container">
+<div>
   <h2>Your Ordered Items</h2>
   <div>
-      <h5 *ngFor="let item of orderedItemList; index as i" >
-        {{item.itemName}} X {{item.itemQuantity}}---------------{{item.totalPrice}}
-    </h5>
-    <h5>Sub Total ------------- {{calculateOrderTotal()}}</h5>
-  </div>
-  <div class="form-check">
+     <table class="table table-hover">
+       <tbody>
+          <tr class="table-primary" *ngFor="let item of orderedItemList; index as i">
+            <td>{{item.itemName }}</td>
+            <td>X</td>
+            <td>{{item.itemQuantity}}</td>
+            <td>${{item.totalPrice }}</td>
+          </tr>
+          <tr>
+            <td>Sub Total</td>
+            <td>${{calculateOrderTotal()}}</td>
+          </tr>
+          <tr *ngIf="!isPathCheckout">
+            <td>Tax</td>
+            <td>${{tax}}</td>
+          </tr>
+          <tr *ngIf="!isPathCheckout">
+            <td>Total</td>
+            <td>${{total}}</td>
+          </tr>
+       </tbody>
+     </table>
 
   </div>
-
-
- <button *ngIf="isPathCheckout" routerLink="../placeOrder" type="button"  (click)="onCheckOut()" >Continue to checkout</button>
-
+  <button *ngIf="isPathCheckout" routerLink="../placeOrder" type="button"  (click)="onCheckOut()">Continue to checkout</button>
 </div>

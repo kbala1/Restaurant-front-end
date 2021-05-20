@@ -11,6 +11,8 @@ import { OrderService } from '../services/order/order-service';
 export class CheckOutComponent implements OnInit {
   @Input('orderedItemList') orderedItemList: any[];
 
+  tax: number;
+  total: number;
   isPathCheckout: boolean;
 
   constructor(private route: ActivatedRoute, private orderService: OrderService) { }
@@ -22,6 +24,8 @@ export class CheckOutComponent implements OnInit {
      else {
        this.isPathCheckout = true;
      }
+
+     this.getTotalAmount();
   }
 
   onCheckOut(): void {
@@ -37,6 +41,12 @@ export class CheckOutComponent implements OnInit {
     console.log(orderTotal);
     return orderTotal;
 
+  }
+
+  getTotalAmount(): void {
+    let subtotal = this.calculateOrderTotal();
+    this.tax = subtotal * .10;
+    this.total = subtotal + this.tax;
   }
 
 }
