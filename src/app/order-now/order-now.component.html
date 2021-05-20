@@ -3,7 +3,7 @@
     <h4>{{category.name}}</h4>
     <div  *ngFor="let item of category.itemList; index as j">
       <button style="width: 90%" type="button" class="btn btn-info btn-lg " (click)="openModal(i, j)">
-        <pre>{{item.name}}           ${{item.price}}.00</pre>
+        <pre>{{item.name}}           ${{item.price}}</pre>
       </button>
       <div class="modal" tabindex="-1" role="dialog"  [ngStyle]="{'display':display}">
         <div class="modal-dialog" role="document">
