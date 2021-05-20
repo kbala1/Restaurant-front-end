@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {CategoryService} from '../services/category/category.service';
-import {CheckOutComponent} from "../check-out/check-out.component";
+
 
 @Component({
   selector: 'app-order-now',
@@ -9,7 +9,7 @@ import {CheckOutComponent} from "../check-out/check-out.component";
 })
 export class OrderNowComponent implements OnInit {
   public categories: any[];
-  display = "none";
+  display = 'none';
   currentItem: any;
   orderedItemList: any[] = [];
 
