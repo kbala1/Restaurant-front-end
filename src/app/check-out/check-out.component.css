@@ -1,0 +1,13 @@
+.form-check {
+  margin-inside: 100px;
+  margin-top: 50px;
+  margin-inline: 100px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+button {
+  height: 50px;
+  background-color: darkgrey;
+}
+

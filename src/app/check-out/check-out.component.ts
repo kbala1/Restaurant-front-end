@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import { OrderService } from '../services/order/order-service';
 
 
 @Component({
@@ -9,14 +11,21 @@ import {Component, Input, OnInit} from '@angular/core';
 export class CheckOutComponent implements OnInit {
   @Input('orderedItemList') orderedItemList: any[];
 
-  constructor() { }
+  isPathCheckout: boolean;
 
-  onCheckOut(): void {
-
-  }
+  constructor(private route: ActivatedRoute, private orderService: OrderService) { }
 
   ngOnInit(): void {
+     if (this.route.routeConfig.path.includes('placeOrder')) {
+       this.isPathCheckout = false;
+     }
+     else {
+       this.isPathCheckout = true;
+     }
+  }
 
+  onCheckOut(): void {
+    this.orderService.setOrderedItems(this.orderedItemList);
   }
 
   calculateOrderTotal(): number {
@@ -29,6 +38,5 @@ export class CheckOutComponent implements OnInit {
     return orderTotal;
 
   }
-
 
 }
