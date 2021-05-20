@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
+import {OrderService} from "../services/order/order-service";
 
 @Component({
   selector: 'app-place-order',
@@ -7,26 +8,59 @@ import {FormControl} from '@angular/forms';
   styleUrls: ['./place-order.component.css']
 })
 export class PlaceOrderComponent implements OnInit {
-  @Input('orderedItemList') orderedItemList: any[];
+  orderedItemList: any[];
+  deliveryOrPickup = 'pickup';
 
   firstName = new FormControl('');
   lastName = new FormControl('');
   phoneNo = new FormControl('');
   address = new FormControl('');
 
-  constructor() { }
+
+
+  constructor(private orderService: OrderService) {
+  }
 
   ngOnInit(): void {
-  }
-  calculateOrderTotal(): number {
-    let orderTotal = 0;
-    if (this.orderedItemList === null){
-      return 0;
-    }
-    this.orderedItemList.forEach(item => orderTotal += item.totalPrice);
-    console.log(orderTotal);
-    return orderTotal;
-
+    this.orderedItemList = this.orderService.getOrderedItems();
   }
 
+  // calculateOrderTotal(): number {
+  //   let orderTotal = 0;
+  //   if (this.orderedItemList === null){
+  //     return 0;
+  //   }
+  //   this.orderedItemList.forEach(item => orderTotal += item.totalPrice);
+  //   console.log(orderTotal);
+  //   return orderTotal;
+
+//}
+  submit(): void {
+    console.log(this.firstName.value, this.lastName.value, this.phoneNo.value, this.address.value);
+    console.log("value submitted");
+    let items = this.orderedItemList.map(item => {
+      return {
+        itemId: item.itemId,
+        itemQuantity: item.itemQuantity
+      };
+    });
+    const body = {
+      firstName: this.firstName.value,
+      lastName: this.lastName.value,
+      phoneNo: this.phoneNo.value,
+      address: this.address.value,
+      items: items,
+      orderType: this.deliveryOrPickup
+
+    };
+    this.orderService.submitOrder(body);
+    console.log(body);
+  }
 }
+
+
+
+
+
+
+
