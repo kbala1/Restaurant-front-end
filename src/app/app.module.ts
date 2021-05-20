@@ -10,6 +10,8 @@ import { MenuComponent } from './menu/menu.component';
 import {HttpClientModule} from "@angular/common/http";
 import { OrderNowComponent } from './order-now/order-now.component';
 import { CheckOutComponent } from './check-out/check-out.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { PlaceOrderComponent } from './place-order/place-order.component';
 // import { CheckOutComponent } from './services/category/check-out/check-out.component';
 
 @NgModule({
@@ -19,15 +21,18 @@ import { CheckOutComponent } from './check-out/check-out.component';
     MenuComponent,
     OrderNowComponent,
     CheckOutComponent,
+    PlaceOrderComponent,
     // CheckOutComponent
   ],
-  imports: [
-    AppRoutingModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    NgbModule,
-    HttpClientModule
-  ],
+    imports: [
+        AppRoutingModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        NgbModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -3,14 +3,12 @@
   grid-template-columns: 65%  35%;
   column-width: fill-available;
   margin-top: 100px;
-
-
-
 }
 
 h1 {
   margin-bottom: 60px;
 }
+
 .form-group {
   height: 25%;
   margin-right: 20%;
@@ -19,6 +17,13 @@ h1 {
 .inside {
   height: 100%;
   margin-left: 70px;
+}
 
+.form-control {
+  height: 60px;
+}
 
+button {
+  height: 50px;
+  background-color: darkgrey;
 }
