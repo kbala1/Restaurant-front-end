@@ -9,8 +9,6 @@ import { CategoryService } from '../services/category/category.service';
 })
 export class MenuComponent implements OnInit {
   public categories: any[];
-  // public categoryName: string;
-  // public categoryDescription: string;
 
   constructor(private categoryService: CategoryService ) { }
 

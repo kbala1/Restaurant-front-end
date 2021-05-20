@@ -32,6 +32,8 @@ export class CheckOutComponent implements OnInit {
     this.orderService.setOrderedItems(this.orderedItemList);
   }
 
+  // Calculate the price of items
+
   calculateOrderTotal(): number {
     let orderTotal = 0;
     if (this.orderedItemList === null){
@@ -43,6 +45,7 @@ export class CheckOutComponent implements OnInit {
 
   }
 
+  // Calculate the amount after tax
   getTotalAmount(): void {
     let subtotal = this.calculateOrderTotal();
     this.tax = subtotal * .10;

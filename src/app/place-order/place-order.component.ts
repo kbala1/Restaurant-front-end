@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
-import {OrderService} from "../services/order/order-service";
+import {OrderService} from '../services/order/order-service';
+declare const M;
 
 @Component({
   selector: 'app-place-order',
@@ -17,7 +18,6 @@ export class PlaceOrderComponent implements OnInit {
   address = new FormControl('');
 
 
-
   constructor(private orderService: OrderService) {
   }
 
@@ -25,16 +25,6 @@ export class PlaceOrderComponent implements OnInit {
     this.orderedItemList = this.orderService.getOrderedItems();
   }
 
-  // calculateOrderTotal(): number {
-  //   let orderTotal = 0;
-  //   if (this.orderedItemList === null){
-  //     return 0;
-  //   }
-  //   this.orderedItemList.forEach(item => orderTotal += item.totalPrice);
-  //   console.log(orderTotal);
-  //   return orderTotal;
-
-//}
   submit(): void {
     console.log(this.firstName.value, this.lastName.value, this.phoneNo.value, this.address.value);
     console.log("value submitted");
@@ -55,7 +45,11 @@ export class PlaceOrderComponent implements OnInit {
     };
     this.orderService.submitOrder(body);
     console.log(body);
+    const toastHTML = 'Order is placed';
+    M.toast({html: toastHTML});
   }
+
+
 }
 
 

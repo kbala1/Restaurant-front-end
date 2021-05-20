@@ -1,22 +1,17 @@
 
-  <div class="container">
+<div class="container">
     <form>
       <h1>Provide your contact Info</h1>
       <div class="form-group">
-    <!--    <label for="exampleInputEmail1">Email address</label>-->
         <input type="text" class="form-control" id="firstName" [formControl]="firstName"  placeholder="First Name">
-    <!--    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
       </div>
-      <div class="form-group">
-    <!--    <label for="exampleInputPassword1">Password</label>-->
+        <div class="form-group">
         <input type="text" class="form-control" id="lastName" [formControl]="lastName" placeholder="Last Name">
       </div>
       <div class="form-group">
-        <!--    <label for="exampleInputEmail1">Email address</label>-->
         <input type="text" class="form-control" id="phoneNumber" [formControl]="phoneNo"  placeholder="Phone Number">
       </div>
       <div class="form-group">
-        <!--    <label for="exampleInputPassword1">Password</label>-->
         <input type="text" class="form-control" id="address" [formControl]="address" placeholder="Address">
       </div>
       <h2>Order Type</h2>
@@ -37,9 +32,21 @@
     </form>
 
     <div>
-      <app-check-out [orderedItemList]="orderedItemList"></app-check-out>
-      <button type="button" (click)="submit()">Place Order</button>
+      <div>
+        <app-check-out [orderedItemList]="orderedItemList"></app-check-out>
+      </div>
+      <h4>Credit Card Info</h4>
+      <form class="form-inline">
+        <div style="margin-bottom: 20px">
+          <input type="text"   placeholder="Card Number">&nbsp;&nbsp;&nbsp;
+          <input type="text"   placeholder="MM/YY">
+        </div>
+        <div style="margin-bottom: 20px">
+          <input type="text"   placeholder="CVV">&nbsp;&nbsp;&nbsp;
+          <input type="text"   placeholder="Zip">
+        </div>
+      </form>
+      <button type="button" style="width:200px;" (click)="submit()">Place Order</button>
     </div>
-
   </div>
 

@@ -12,7 +12,7 @@ import { OrderNowComponent } from './order-now/order-now.component';
 import { CheckOutComponent } from './check-out/check-out.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { PlaceOrderComponent } from './place-order/place-order.component';
-// import { CheckOutComponent } from './services/category/check-out/check-out.component';
+
 
 @NgModule({
   declarations: [
@@ -21,8 +21,7 @@ import { PlaceOrderComponent } from './place-order/place-order.component';
     MenuComponent,
     OrderNowComponent,
     CheckOutComponent,
-    PlaceOrderComponent,
-    // CheckOutComponent
+    PlaceOrderComponent
   ],
     imports: [
         AppRoutingModule,

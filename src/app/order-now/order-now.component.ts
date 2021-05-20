@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CategoryService} from '../services/category/category.service';
 
 
@@ -52,9 +52,7 @@ export class OrderNowComponent implements OnInit {
   }
 
   onAdd(): void {
-    // path: '',
-    // component: CheckOutComponent;
-    this.orderedItemList.push(this.currentItem);
+        this.orderedItemList.push(this.currentItem);
 
     console.log('Add the things');
     this.display ='none';
