@@ -19,6 +19,7 @@ export class OrderNowComponent implements OnInit {
     this.getCategories();
   }
 
+  // to open the modal popup for order the items
   openModal(categoryIndex: number, itemIndex: number): void {
     if (this.categories.length > 0) {
       this.currentItem = {
@@ -58,6 +59,7 @@ export class OrderNowComponent implements OnInit {
     this.display ='none';
   }
 
+  // to get the list of ordered items
   getCategories(): any {
     console.log('here');
     this.categoryService.getCategories().subscribe(response => {

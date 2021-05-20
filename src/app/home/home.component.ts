@@ -10,6 +10,7 @@ declare const M;
 })
 export class HomeComponent {
 
+  // To display the carousel on home page
   images: any[] = ['fries1.jpeg', 'beverage1.jpeg', 'burger1.jpeg', 'chinese1.jpeg'].map(name => 'assets/images/' + name);
 
   constructor(config: NgbCarouselConfig) {

@@ -25,6 +25,7 @@ export class PlaceOrderComponent implements OnInit {
     this.orderedItemList = this.orderService.getOrderedItems();
   }
 
+  // to send the order detail
   submit(): void {
     console.log(this.firstName.value, this.lastName.value, this.phoneNo.value, this.address.value);
     console.log("value submitted");
@@ -48,8 +49,6 @@ export class PlaceOrderComponent implements OnInit {
     const toastHTML = 'Order is placed';
     M.toast({html: toastHTML});
   }
-
-
 }
 
 

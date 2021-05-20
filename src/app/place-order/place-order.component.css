@@ -5,8 +5,8 @@
   margin-top: 100px;
 }
 
-h1,h2 {
-  margin-bottom: 60px;
+h1,h3 {
+  margin-bottom: 40px;
   text-align: left;
 }
 
@@ -31,4 +31,9 @@ h1,h2 {
 button {
   height: 50px;
   background-color: darkgrey;
+}
+.order {
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 25px;
 }

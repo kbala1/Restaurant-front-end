@@ -16,3 +16,7 @@ img {
   max-height: 100px;
   margin-right:30px;
 }
+.container {
+  background-image: '../assests/images/backImage.jpeg';
+}
+

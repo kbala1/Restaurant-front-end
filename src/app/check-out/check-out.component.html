@@ -4,9 +4,9 @@
      <table class="table table-hover">
        <tbody>
           <tr class="table-primary" *ngFor="let item of orderedItemList; index as i">
-            <td>{{item.itemName }}</td>
-            <td>X</td>
-            <td>{{item.itemQuantity}}</td>
+            <td>{{item.itemName }}&nbsp; X &nbsp;{{item.itemQuantity}}</td>
+<!--            <td></td>-->
+<!--            <td></td>-->
             <td>${{item.totalPrice }}</td>
           </tr>
           <tr>

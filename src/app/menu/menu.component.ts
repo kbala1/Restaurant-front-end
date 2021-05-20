@@ -16,6 +16,7 @@ export class MenuComponent implements OnInit {
     this.getCategories();
   }
 
+  // to display menu items
   getCategories(): any {
     console.log('here');
     this.categoryService.getCategories().subscribe(response => {
