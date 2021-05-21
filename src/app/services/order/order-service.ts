@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
-const localUrl = 'http://localhost:9092';
+ // const localUrl = 'http://localhost:9092';
+const herokuUrl = 'https://salty-gorge-16640.herokuapp.com/';
 
 
 @Injectable({
@@ -24,7 +25,7 @@ export class OrderService {
 
   submitOrder(body: {}): void {
     this.http
-      .post(`${localUrl}/api/orders`, body)
+      .post(`${herokuUrl}/api/orders`, body)
       .subscribe(response => {
         console.log(response);
       });
