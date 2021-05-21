@@ -60,13 +60,13 @@ For Back-end:
 For Front-end:
 
 -------------------------------------------
- | Angular       | JavaScript framework |
- |  npm          | Node Package Manager |
- |  Bootstrap    | CSS framework        |
- |  HTML         | For layout           |
- |  CSS          | For styling          |
- | TypeScript    | Typed JavaScript     |
- | JSON          | Data interchange format |
+ |Angular       |JavaScript framework|
+ |npm          |Node Package Manager|
+ |Bootstrap    |CSS framework|
+ |HTML         |For layout|
+ |CSS          |For styling|
+ |TypeScript    |Typed JavaScript|
+ |JSON          |Data interchange format|
 
 Artifacts
 
