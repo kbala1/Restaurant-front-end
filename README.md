@@ -50,23 +50,23 @@ The order now, checkout, and place order parts of the application were challengi
 **Technologies Leveraged:**
 For Back-end:
 ----------------------------------------
- Spring Boot | API  Framework for Java
- Java 11     | Code Language
- Maven       | Java dependency management
- Hibernate   | Object Relational Mapping tool
- PostgreSQL  | Relational Database
+ | Spring Boot | API  Framework for Java |
+ | Java 11     | Code Language           |
+ | Maven       | Java dependency management |
+ | Hibernate   | Object Relational Mapping tool |
+ | PostgreSQL  | Relational Database      |
 
 
 For Front-end:
 
 -------------------------------------------
- Angular      | JavaScript framework
- npm          | Node Package Manager
- Bootstrap    | CSS framework
- HTML         | For layout
- CSS          | For styling
- TypeScript   | Typed JavaScript
- JSON         | Data interchange format
+ | Angular       | JavaScript framework |
+ |  npm          | Node Package Manager |
+ |  Bootstrap    | CSS framework        |
+ |  HTML         | For layout           |
+ |  CSS          | For styling          |
+ | TypeScript    | Typed JavaScript     |
+ | JSON          | Data interchange format |
 
 Artifacts
 
@@ -74,13 +74,13 @@ Artifacts
 
 **API EndPoints:**
 
--------------------------------
- No    | Req.Type  | Url
+----------------------------------------------
+ | No    | Req.Type  | Url                  |
 
- 01    | GET       | api/categories
- 02    | GET       | api/user/{phoneNo}
- 03    | GET       | api/orders/{orderId}
- 04    | POST      | api/orders
+ | 01    | GET       | api/categories       |
+ | 02    | GET       | api/user/{phoneNo}   |
+ | 03    | GET       | api/orders/{orderId} |
+ | 04    | POST      | api/orders           |
 
 
 
