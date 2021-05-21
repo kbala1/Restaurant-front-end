@@ -1,6 +1,4 @@
 
-Readme
-
 RESTAURANT
 
 **Overview:**
@@ -26,59 +24,65 @@ User stories as a restaurant owner: As the owner,
 The order now, checkout, and place order parts of the application were challenging -- specifically, getting the data flow to work between them was challenging. These three parts of the application share the same data and have different needs for updates. Because a user action in one part affects the data that is needed for the other parts, getting the data flow correct between these three components is important to my application. I also simplified my original wireframes to move the form-related components to the PlaceOrder component instead of having some in PlaceOrder and others in Checkout component -- this helped me simplify the amount of data that had to be shared between components.
 
 **Future Plans:**
-Provide a dashboard to the restaurant owner that analyzes the sales to help owner plan for inventory of ingredients and to help owner determine which parts of the menu should be expanded.
-Build an admin UI so that owner can add new item to menu, change the price of an item, and more.
-Integrate the payment details with either the Paypal API or the Stripe API to be able to validate the provided payment details.
-Extract this website into a platform for any restaurant.
-Provide facilities to create sale reports -- this could be useful when this website is a platform for hosting restaurant websites instead of just one website for one restaurant.
-Add advertisements on website to keep cost of website maintenance low since this is for a small business.
-Allow user to provide feedback through a feedback component.
+* Provide a dashboard to the restaurant owner that analyzes the sales to help owner plan for inventory of ingredients and to help owner determine which parts of the menu should be expanded.
+* Build an admin UI so that owner can add new item to menu, change the price of an item, and more.
+* Integrate the payment details with either the Paypal API or the Stripe API to be able to validate the provided payment details.
+* Extract this website into a platform for any restaurant.
+* Provide facilities to create sale reports -- this could be useful when this website is a platform for hosting restaurant websites instead of just one website for one restaurant.
+* Add advertisements on website to keep cost of website maintenance low since this is for a small business.
+* Allow user to provide feedback through a feedback component.
 
 **What would I do differently?**
-If I had more time, I could add more functionality such as providing time order can be expected to be ready, send notification to customer that order is ready for pick up, add multiple payment options. In terms of planning, I think next time, I would spend more time planning the data flow between the different pages of my application. I spent time planning wireframes, creating the entity models, thinking about user stories, but the biggest challenge was determining the data flow when data had to be shared and updated across multiple components.
+ If I had more time, I could add more functionality such as providing time order can be expected to be ready, send notification to customer that order is ready for pick up, add multiple payment options. In terms of planning, I think next time, I would spend more time planning the data flow between the different pages of my application. I spent time planning wireframes, creating the entity models, thinking about user stories, but the biggest challenge was determining the data flow when data had to be shared and updated across multiple components.
 
 **What am I most proud of?**
-The order now and checkout components were challenging, so I am proud to have a working application with those data flows working. I am also proud to have been able to create both a backend service and a frontend UI, which seemed very difficult at the beginning of this course.
+ The order now and checkout components were challenging, so I am proud to have a working application with those data flows working. I am also proud to have been able to create both a backend service and a frontend UI, which seemed very difficult at the beginning of this course.
 
-**What did I learn?**
-How to Structure a project using different frameworks and technologies like Spring Boot, Angular etc.
-Deploy an Angular app and a Spring Boot app on Heroku.
-How to add dependencies for frameworks.
-How to make a project production ready.
-How to connect the frontend to the backend.
-How to design an API with a specific frontend in mind.
+**What did I learn?** 
+* How to Structure a project using different frameworks and technologies like Spring Boot, Angular etc.
+* Deploy an Angular app and a Spring Boot app on Heroku.
+* How to add dependencies for frameworks.
+* How to make a project production ready.
+* How to connect the frontend to the backend.
+* How to design an API with a specific frontend in mind.
 
 **Technologies Leveraged:**
 For Back-end:
-
+----------------------------------------
  Spring Boot | API  Framework for Java
- Java 11    |Code Language
-Maven
-Java dependency management
-Hibernate
-Object Relational Mapping tool
-PostgreSQL
-Relational Database
+ Java 11     | Code Language
+ Maven       | Java dependency management
+ Hibernate   | Object Relational Mapping tool
+ PostgreSQL  | Relational Database
+
 
 For Front-end:
-Angular
-JavaScript framework
-npm
-Node Package Manager
-Bootstrap
-CSS framework
-HTML
-For layout
-CSS
-For styling
-TypeScript
-Typed JavaScript
-JSON
-Data interchange format
+
+-------------------------------------------
+ Angular      | JavaScript framework
+ npm          | Node Package Manager
+ Bootstrap    | CSS framework
+ HTML         | For layout
+ CSS          | For styling
+ TypeScript   | Typed JavaScript
+ JSON         | Data interchange format
 
 Artifacts
 
 ![ERD](documentationImages/Project3ER-Diagram.png)
+
+**API EndPoints:**
+
+-------------------------------
+ No    | Req.Type  | Url
+
+ 01    | GET       | api/categories
+ 02    | GET       | api/user/{phoneNo}
+ 03    | GET       | api/orders/{orderId}
+ 04    | POST      | api/orders
+
+
+
 [Website Wireframe](documentationImages/Website.png)
 
 
