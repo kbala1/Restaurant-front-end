@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormControl} from '@angular/forms';
 import {OrderService} from '../services/order/order-service';
-declare const M;
+
 
 @Component({
   selector: 'app-place-order',
@@ -46,8 +46,8 @@ export class PlaceOrderComponent implements OnInit {
     };
     this.orderService.submitOrder(body);
     console.log(body);
-    const toastHTML = 'Order is placed';
-    M.toast({html: toastHTML});
+    alert('Your order has been placed.');
+
   }
 }
 

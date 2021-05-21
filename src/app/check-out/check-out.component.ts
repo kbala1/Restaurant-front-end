@@ -11,8 +11,8 @@ import { OrderService } from '../services/order/order-service';
 export class CheckOutComponent implements OnInit {
   @Input('orderedItemList') orderedItemList: any[];
 
-  tax: number;
-  total: number;
+  tax: string;
+  total: string;
   isPathCheckout: boolean;
 
   constructor(private route: ActivatedRoute, private orderService: OrderService) { }
@@ -47,9 +47,9 @@ export class CheckOutComponent implements OnInit {
 
   // Calculate the amount after tax
   getTotalAmount(): void {
-    let subtotal = this.calculateOrderTotal();
-    this.tax = subtotal * .10;
-    this.total = subtotal + this.tax;
+    let subtotal = (this.calculateOrderTotal()).toFixed(2);
+    this.tax = (parseFloat(subtotal) * .10).toFixed(2);
+    this.total = (parseFloat(subtotal) + parseFloat(this.tax)).toFixed(2);
   }
 
 }
